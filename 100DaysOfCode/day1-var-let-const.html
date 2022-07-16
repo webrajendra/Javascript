@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<!-- Var, let and const  -->
+<h4>Var </h4>
+<p>1. Variables are containers for storing data (storing data values)</p>
+<p>2. The Var keyword is used in all Javascript code from 1995 to 2015.</p>
+<p>3. The let and const keywords were added to Javascript in 2015</p>
+<p>4. Var is old way to declare a variable.</p>
+<p>5. You can change var value or redeclare also you can update the value.</p>
+<br/>
+<h4>Let</h4>
+<p>Let is block scoped - Anything within curly braces is a block</p>
+<p>Let can't be accessed out of particular block</p>
+<p>Let can be updated but you can't redeclare</p>
+<br/>
+<h4>Const</h4>
+<p>Variable declared with the const maintain contant value</p>
+<p>You can't redclare const variable</p>
+<p>Const variable value is constant, can't change the value.</p>
+<script>
+// ===============Var===========================
+    var sayHello = "Hello";
+    console.log(sayHello);
+    // Redeclare / update var
+    var sayHello = "Hello there"
+    console.log(sayHello);
+// ===============Let===========================
+    let helloTest = "HelloLet";
+    console.log(helloTest)
+
+    helloTest = "AgainHelloLet"; //let can be updated but you can't redeclare
+    console.log(helloTest) 
+    //You can't redeclare or update let variable it will give SyntaxError
+    // If you think varible value will change in future then use - let
+
+// ===============Const=========================== 
+// NOTE: You can uncomment see output in browser
+    // const hello = "HelloConst";
+    // hello = "HelloConstValueChange"; //TypeError: Assignment to constant variable.
+    // const hello = "HelloConst2"; //SyntaxError: Identifier 'hello' has already been declared
+</script>
+
+</body>
+</html>
+
+
+
