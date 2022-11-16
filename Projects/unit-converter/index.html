@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unit Converter</title>
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+}
+h1 {
+margin: 0 0 20px;
+text-align: center;
+}
+.unitConverterWrap {
+background: #580158;
+color: #fff;
+width: 400px;
+margin: 0 auto;
+padding: 15px;
+}
+.unitConverterWrap p {
+width: 35%;
+margin: 0 20px;
+display: inline-block;
+}
+.unitConverterWrap p input {
+width: 130px;
+padding: 10px;
+}
+label {
+display: block;
+font-weight: bold;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div class="unitConverterWrap">
+<h1>Unit Converter</h1>
+<p><label>Feet</label> <input type="number" id="feet" placeholder="0" /></p>
+=
+<p><label>Inch</label> <input type="number" id="inch" placeholder="0" /></p>
+</div>
+
+<script type="text/javascript">
+let feet = document.getElementById('feet');
+let inch = document.getElementById('inch');
+
+feet.addEventListener('input', function() {
+let fVal = this.value;
+let iValue = fVal * 12;
+inch.value = iValue;
+});
+
+inch.addEventListener('input', function() {
+let iVal = this.value;
+let fValue = iVal / 12;
+feet.value = fValue;
+});
+
+</script>
+
+</body>
+</html>
