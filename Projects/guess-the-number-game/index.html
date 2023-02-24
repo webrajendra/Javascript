@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <h1>Guess the Number</h1>
+    <h5>Enter the number between 0 to 100</h5>
+    <p id="result"></p>
+    <p id="message"></p>
+    <form>
+      <input type="number" id="value" />
+      <input type="submit" value="Check" />
+    </form>
+    <script>
+      document.querySelector("form").onsubmit = (e) => {
+        // document.getElementById("value").value = ""; // commented this because validation not working
+        e.preventDefault(); //preventing to do not load the page on submit of form
+        const inputNum = document.getElementById("value").value;
+        const randomNumb = Math.floor(Math.random() * 100);
+        if (inputNum === "") {
+          return alert("Enter a number");
+        } else if (Number(inputNum) === randomNumb) {
+          document.getElementById("result").innerHTML =
+            "You guessed number right";
+        } else if (Number(inputNum) + 10 > randomNumb) {
+          return (document.getElementById("message").innerHTML =
+            "You were near but little higher, " +
+            "Actual Number is " +
+            randomNumb);
+        } else if (Number(inputNum) - 10 < randomNumb) {
+          return (document.getElementById("message").innerHTML =
+            "You were near but little lower, " +
+            "Actual Number is " +
+            randomNumb);
+        } else {
+          document.getElementById("result").innerHTML =
+            "You guessed number Wrong, " + "Correct Number is " + randomNumb;
+        }
+      };
+    </script>
+  </body>
+</html>
