@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+}
+h2 {
+    margin: 15px 0;
+    text-align: center;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+    height: 50vh;
+}
+input[type="number"] {
+    border: solid 1px #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    border: solid 1px #ddd;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.paras {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 500px;
+    margin: 10px auto;
+}
