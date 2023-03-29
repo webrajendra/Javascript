@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./bg.jpg);
+    background-size: contain;
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counterTimer {
+    display: flex;
+}
+.counterTimer > p {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.counterTimer > p span {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0;
+}
